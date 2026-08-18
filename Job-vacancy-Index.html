@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Vacancy | Jobs</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f7f8fa;color:#222;line-height:1.6}
+    nav{background:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.06);position:sticky;top:0;z-index:10}
+    .logo{font-size:22px;font-weight:700;color:#1d4ed8}
+    nav a{text-decoration:none;color:#333;margin-left:24px;font-weight:600}
+    .hero{padding:80px 7%;background:#eef4ff;text-align:center}
+    .hero h1{font-size:46px;margin-bottom:12px;color:#163a72}
+    .hero p{font-size:19px;color:#555;margin-bottom:28px}
+    .btn{display:inline-block;background:#1d4ed8;color:#fff;text-decoration:none;padding:13px 28px;border-radius:7px;font-weight:700;border:0;cursor:pointer}
+    section{padding:55px 7%;max-width:1100px;margin:auto}
+    .title{text-align:center;font-size:32px;margin-bottom:30px;color:#163a72}
+    .jobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+    .job{background:#fff;padding:25px;border-radius:12px;box-shadow:0 3px 14px rgba(0,0,0,.07);border:1px solid #eee}
+    .job h3{color:#1d4ed8;margin-bottom:8px}
+    .job p{color:#666;margin-bottom:15px}
+    .apply{background:#fff;border-radius:12px;padding:30px;box-shadow:0 3px 14px rgba(0,0,0,.07);max-width:650px;margin:auto}
+    input,select,textarea{width:100%;padding:13px;margin:8px 0 16px;border:1px solid #d5d9e0;border-radius:7px;font-size:15px}
+    textarea{min-height:100px;resize:vertical}
+    label{font-weight:600}
+    footer{text-align:center;background:#163a72;color:#fff;padding:25px;margin-top:30px}
+    @media(max-width:650px){.hero h1{font-size:34px}nav{padding:15px 5%}nav a{margin-left:12px;font-size:14px}section{padding:45px 5%}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">JOB VACANCY</div>
+  <div>
+    <a href="#jobs">Jobs</a>
+    <a href="#apply">Apply</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Find Your Next Job</h1>
+  <p>Explore current job opportunities and take the next step in your career.</p>
+  <a class="btn" href="#jobs">View Jobs</a>
+</header>
+
+<section id="jobs">
+  <h2 class="title">Current Job Openings</h2>
+  <div class="jobs">
+    <div class="job">
+      <h3>Health Advisor</h3>
+      <p>Guide and support clients with professional service and communication.</p>
+      <a class="btn" href="#apply">Apply Now</a>
+    </div>
+    <div class="job">
+      <h3>HR Executive</h3>
+      <p>Handle recruitment, candidate coordination and basic HR activities.</p>
+      <a class="btn" href="#apply">Apply Now</a>
+    </div>
+    <div class="job">
+      <h3>Supervisor</h3>
+      <p>Manage daily team activities and support employees in achieving goals.</p>
+      <a class="btn" href="#apply">Apply Now</a>
+    </div>
+    <div class="job">
+      <h3>Office Assistant</h3>
+      <p>Support everyday office operations and administrative tasks.</p>
+      <a class="btn" href="#apply">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<section id="apply">
+  <h2 class="title">Apply for a Job</h2>
+  <form class="apply" onsubmit="submitApplication(event)">
+    <label>Full Name</label>
+    <input type="text" required placeholder="Enter your full name">
+
+    <label>Mobile Number</label>
+    <input type="tel" required placeholder="Enter your mobile number">
+
+    <label>Email</label>
+    <input type="email" required placeholder="Enter your email">
+
+    <label>Position</label>
+    <select required>
+      <option value="">Select a position</option>
+      <option>Health Advisor</option>
+      <option>HR Executive</option>
+      <option>Supervisor</option>
+      <option>Office Assistant</option>
+    </select>
+
+    <label>Message</label>
+    <textarea placeholder="Tell us briefly about yourself"></textarea>
+
+    <button class="btn" type="submit">Submit Application</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Job Vacancy. All Rights Reserved.</p>
+</footer>
+
+<script>
+function submitApplication(event){
+  event.preventDefault();
+  alert("Thank you! Your application has been received.");
+}
+</script>
+
+</body>
+</html>
